@@ -48,8 +48,8 @@ def read_pair_file(fpath):
     return pairs
 
 def read_RPI_pairs(size):
-    pair_path = PAIRS_PATH["RPI"][size]
-    pairs = read_pair_file(pair_path)
+    pair_path = PAIRS_PATH["RPI"][size] #/data/RPI369_pairs.txt 에서 데이터 읽어옴 (1drz-A, 1drz-B, 1) 형식 
+    pairs = read_pair_file(pair_path) # (1drz-A, 1drz-B, 1) (맨 마지막껀 레이블, 첫번째 두번째껀 잘 모르겠음) 이 원소로 들어있는 배열 생성
     return pairs
 
 def read_NPInter_pairs():
@@ -63,13 +63,18 @@ def read_NPInter_pairs():
 
 def read_RPI_pairSeq(size):
     X, Y = [], []
-    pairs = read_RPI_pairs(size)
-    rseq, pseq = read_RPI_fasta(size)
+    pairs = read_RPI_pairs(size) 
+    # /data/RPI369_pairs.txt 의 파일을 읽어 [(1drz-A, 1drz-B, 1), (1drz-A, 1drz-B, 1), ...] 형식의 배열 반환 
+    rseq, pseq = read_RPI_fasta(size) 
+    # /data/sequence/RPI369_protein_seq.fa 의 key, value값이 dic 형태로 저장되어서 pseq에 반환됨. rseq는 RNA파일
+    # pairs에는 protein_id값이, pseq에는 id와 value쌍의 dic이 저장.
     for protein_id, rna_id, label in pairs:
         X.append([pseq[protein_id], rseq[rna_id]])
         Y.append(int(label))
     
-    return X, Y
+    return X, Y 
+# X : 2차원 배열 [[protein value1, rna value1], [protein value1, rna value1], ... ]
+# Y : 1차원 배열. label의 배열 [1, 1, 1, ... , 0, 0, 0]
 
 def read_NPInter_pairSeq():
     X, Y = [], []
