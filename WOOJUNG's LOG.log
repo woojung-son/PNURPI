@@ -1,0 +1,54 @@
+[2020-09-07 17:11:27,682][DEBUG][<ipython-input-1-c15dff68fab4>:262] Classification is about to start ... 
+[2020-09-07 17:11:27,685][DEBUG][<ipython-input-1-c15dff68fab4>:257] =======================================================
+[2020-09-07 17:11:27,686][DEBUG][<ipython-input-1-c15dff68fab4>:233] Dataset : npz/RPI369.npz
+[2020-09-07 17:11:27,705][DEBUG][<ipython-input-1-c15dff68fab4>:191] =======================================================
+[2020-09-07 17:11:27,706][DEBUG][<ipython-input-1-c15dff68fab4>:192] RF_Classifying ... 
+[2020-09-07 17:14:15,390][DEBUG][<ipython-input-1-c15dff68fab4>:212] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.593
+[2020-09-07 17:14:15,400][DEBUG][<ipython-input-1-c15dff68fab4>:213] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 20, 'min_samples_leaf': 10, 'min_samples_split': 22, 'n_estimators': 10}
+[2020-09-07 17:14:15,401][DEBUG][<ipython-input-1-c15dff68fab4>:214] GridSearchCV를 이용한 test점수 ==> 0.574
+[2020-09-07 17:14:15,405][DEBUG][<ipython-input-1-c15dff68fab4>:215] GridSearchCV를 이용한 최고 성능 모델 ==> 
+RandomForestClassifier(max_depth=7, max_leaf_nodes=20, min_samples_leaf=10,
+                       min_samples_split=22, n_estimators=10, random_state=2)
+[2020-09-07 17:14:15,407][DEBUG][<ipython-input-1-c15dff68fab4>:259] 0.5743243243243243
+[2020-09-07 17:14:15,408][DEBUG][<ipython-input-1-c15dff68fab4>:257] =======================================================
+[2020-09-07 17:14:15,409][DEBUG][<ipython-input-1-c15dff68fab4>:233] Dataset : npz/RPI1807.npz
+[2020-09-07 17:14:15,487][DEBUG][<ipython-input-1-c15dff68fab4>:191] =======================================================
+[2020-09-07 17:14:15,489][DEBUG][<ipython-input-1-c15dff68fab4>:192] RF_Classifying ... 
+[2020-09-07 17:31:51,326][DEBUG][<ipython-input-1-c15dff68fab4>:212] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.952
+[2020-09-07 17:31:51,327][DEBUG][<ipython-input-1-c15dff68fab4>:213] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 30, 'min_samples_leaf': 18, 'min_samples_split': 6, 'n_estimators': 100}
+[2020-09-07 17:31:51,328][DEBUG][<ipython-input-1-c15dff68fab4>:214] GridSearchCV를 이용한 test점수 ==> 0.934
+[2020-09-07 17:31:51,330][DEBUG][<ipython-input-1-c15dff68fab4>:215] GridSearchCV를 이용한 최고 성능 모델 ==> 
+RandomForestClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=18,
+                       min_samples_split=6, random_state=2)
+[2020-09-07 17:31:51,337][DEBUG][<ipython-input-1-c15dff68fab4>:259] 0.933641975308642
+[2020-09-07 17:31:51,338][DEBUG][<ipython-input-1-c15dff68fab4>:257] =======================================================
+[2020-09-07 17:31:51,339][DEBUG][<ipython-input-1-c15dff68fab4>:233] Dataset : npz/RPI2241.npz
+[2020-09-07 17:31:51,432][DEBUG][<ipython-input-1-c15dff68fab4>:191] =======================================================
+[2020-09-07 17:31:51,433][DEBUG][<ipython-input-1-c15dff68fab4>:192] RF_Classifying ... 
+[2020-09-07 17:37:26,076][DEBUG][<ipython-input-1-c15dff68fab4>:212] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.748
+[2020-09-07 17:37:26,077][DEBUG][<ipython-input-1-c15dff68fab4>:213] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 30, 'min_samples_leaf': 6, 'min_samples_split': 13, 'n_estimators': 5}
+[2020-09-07 17:37:26,078][DEBUG][<ipython-input-1-c15dff68fab4>:214] GridSearchCV를 이용한 test점수 ==> 0.755
+[2020-09-07 17:37:26,080][DEBUG][<ipython-input-1-c15dff68fab4>:215] GridSearchCV를 이용한 최고 성능 모델 ==> 
+RandomForestClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=6,
+                       min_samples_split=13, n_estimators=5, random_state=2)
+[2020-09-07 17:37:26,098][DEBUG][<ipython-input-1-c15dff68fab4>:259] 0.7547380156075808
+[2020-09-07 17:37:26,100][DEBUG][<ipython-input-1-c15dff68fab4>:257] =======================================================
+[2020-09-07 17:37:26,102][DEBUG][<ipython-input-1-c15dff68fab4>:233] Dataset : npz/RPI488.npz
+[2020-09-07 17:37:26,125][DEBUG][<ipython-input-1-c15dff68fab4>:191] =======================================================
+[2020-09-07 17:37:26,126][DEBUG][<ipython-input-1-c15dff68fab4>:192] RF_Classifying ... 
+[2020-09-07 17:42:55,531][DEBUG][<ipython-input-1-c15dff68fab4>:212] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.895
+[2020-09-07 17:42:55,532][DEBUG][<ipython-input-1-c15dff68fab4>:213] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 6, 'max_leaf_nodes': 10, 'min_samples_leaf': 4, 'min_samples_split': 13, 'n_estimators': 125}
+[2020-09-07 17:42:55,533][DEBUG][<ipython-input-1-c15dff68fab4>:214] GridSearchCV를 이용한 test점수 ==> 0.898
+[2020-09-07 17:42:55,535][DEBUG][<ipython-input-1-c15dff68fab4>:215] GridSearchCV를 이용한 최고 성능 모델 ==> 
+RandomForestClassifier(max_depth=6, max_leaf_nodes=10, min_samples_leaf=4,
+                       min_samples_split=13, n_estimators=125, random_state=2)
+[2020-09-07 17:42:55,541][DEBUG][<ipython-input-1-c15dff68fab4>:259] 0.8979591836734694
+[2020-09-07 17:42:55,543][DEBUG][<ipython-input-1-c15dff68fab4>:233] Dataset : npz/NPInter.npz
+[2020-09-07 17:42:56,040][DEBUG][<ipython-input-1-c15dff68fab4>:191] =======================================================
+[2020-09-07 17:42:56,041][DEBUG][<ipython-input-1-c15dff68fab4>:192] RF_Classifying ... 
+[2020-09-07 21:54:13,382][DEBUG][<ipython-input-1-c15dff68fab4>:212] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.898
+[2020-09-07 21:54:13,390][DEBUG][<ipython-input-1-c15dff68fab4>:213] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 30, 'min_samples_leaf': 30, 'min_samples_split': 6, 'n_estimators': 50}
+[2020-09-07 21:54:13,394][DEBUG][<ipython-input-1-c15dff68fab4>:214] GridSearchCV를 이용한 test점수 ==> 0.906
+[2020-09-07 21:54:13,399][DEBUG][<ipython-input-1-c15dff68fab4>:215] GridSearchCV를 이용한 최고 성능 모델 ==> 
+RandomForestClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=30,
+                       min_samples_split=6, n_estimators=50, random_state=2)
