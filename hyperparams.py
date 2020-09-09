@@ -11,6 +11,24 @@ NPZ_PATH = {
         488  : "npz/RPI488.npz"
     }
 }
+Z_NPZ_PATH = {
+    "NPInter" : "npz/Z_NPInter.npz",
+    "RPI" : {
+        1807 : "npz/Z_RPI1807.npz",
+        2241 : "npz/Z_RPI2241.npz",
+        369  : "npz/Z_RPI369.npz",
+        488  : "npz/Z_RPI488.npz"
+    }
+}
+LOG_NPZ_PATH = {
+    "NPInter" : "npz/LOG_NPInter.npz",
+    "RPI" : {
+        1807 : "npz/LOG_RPI1807.npz",
+        2241 : "npz/LOG_RPI2241.npz",
+        369  : "npz/LOG_RPI369.npz",
+        488  : "npz/LOG_RPI488.npz"
+    }
+}
 
 PAIRS_PATH = {
     "NPInter" : BASE_PATH + "NPInter_pairs.txt",

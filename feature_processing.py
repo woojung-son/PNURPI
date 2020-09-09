@@ -66,6 +66,38 @@ def preprocess_feature(x, y, npz_path): # /data/npz/RPI369.npz 파일을 생성�
         a_max = np.max(a)
         return (a - a_min)/(a_max - a_min)
     
+    def z_score_norm(lst):
+        normalized = []
+        for value in lst:
+            normalized_num = (value - np.mean(lst)) / np.std(lst)
+            normalized.append(normalized_num)
+        return normalized
+    
+    def log_norm_dist(feature_dict) :
+        showGraph = False
+        distributized = []
+        df_feature = pd.DataFrame(feature_dict, columns=feature_dict.keys(), index=[0])
+        df_feature = df_feature.T
+
+        if showGraph : 
+            print('Skewness: {:05.2f}'.format(df_feature[0].skew()) , ' ' , 'Kurtosis: {:06.2f}'.format(df_feature[0].kurt()) )
+            f, ax = plt.subplots(figsize = (10, 6)) 
+            plt.plot(df_feature[0])
+            plt.show()
+        
+        df_log_feature = np.log1p(df_feature)
+        
+        if showGraph : 
+            print('Skewness: {:05.2f}'.format(df_log_feature[0].skew()) , ' ' , 'Kurtosis: {:06.2f}'.format(df_log_feature[0].kurt()) )
+            f, ax = plt.subplots(figsize = (10, 6)) 
+            plt.plot(df_log_feature[0])
+            plt.show()
+
+        
+        #distributized.append(np.array(list(df_log_feature[0])))
+        #return distributized
+        return np.array(list(df_log_feature[0]))
+    
     rpdict = get_reduced_protein_letter_dict()
     feature_x = []
     r_mer = 4
@@ -118,13 +150,19 @@ def preprocess_feature(x, y, npz_path): # /data/npz/RPI369.npz 파일을 생성�
                     continue
                 #print(pattern)
         
-        
-        
-        p_feature = np.array(list(p_feature_dict.values()))
+        # 이건 다 우연이고, 데이터셋의 개수에 따라서 달라지는거임!!
+        # 여기서 p_feature 이나 r_feature를 출력해보면 항상 무슨 데이터셋을 쓰든 739번 출력되는데, 739번 출력되는 이유 : 
+        # 각각 p_feature의 알파벳 조합 개수(399) + r_feature의 알파벳 조합 개수(340) 이다. 
+        # p_feature은 7개의 changed_letter 에서 최대 3자리의 중복순열을 하는 개수로, 7 + 49 + 343 = 399이다.
+        #p_feature = np.array(list(p_feature_dict.values()))
+        p_feature = log_norm_dist(p_feature_dict)
         p_feature = min_max_norm(p_feature) #각각의 최소값을 0, 최대값을 1로 해서 그 사이값을 소수로 나타내는 것이다
+        #p_feature = z_score_norm(p_feature)
         
-        r_feature = np.array(list(r_feature_dict.values()))
+        #r_feature = np.array(list(r_feature_dict.values()))
+        r_feature = log_norm_dist(r_feature_dict)
         r_feature = min_max_norm(r_feature)
+        #r_feature = z_score_norm(r_feature)
         
         
         x_protein.append(p_feature)
@@ -157,11 +195,15 @@ def preprocess_feature(x, y, npz_path): # /data/npz/RPI369.npz 파일을 생성�
 
 def preprocess_and_savez_NPInter():
     X, Y = read_NPInter_pairSeq()
-    XP, XR, Y = preprocess_feature(X, Y, NPZ_PATH["NPInter"])
+    #XP, XR, Y = preprocess_feature(X, Y, NPZ_PATH["NPInter"])
+    #XP, XR, Y = preprocess_feature(X, Y, Z_NPZ_PATH["NPInter"])
+    XP, XR, Y = preprocess_feature(X, Y, LOG_NPZ_PATH["NPInter"])
     
 def preprocess_and_savez_RPI(size):
     X, Y = read_RPI_pairSeq(size)
-    XP, XR, Y = preprocess_feature(X, Y, NPZ_PATH["RPI"][size])
+    #XP, XR, Y = preprocess_feature(X, Y, NPZ_PATH["RPI"][size])
+    #XP, XR, Y = preprocess_feature(X, Y, Z_NPZ_PATH["RPI"][size])
+    XP, XR, Y = preprocess_feature(X, Y, LOG_NPZ_PATH["RPI"][size])
 
 if __name__ == "__main__":
     print("Feature Preprocessing")
