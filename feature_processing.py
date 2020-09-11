@@ -3,6 +3,10 @@ from hyperparams import *
 from rawdata_preprocessing import read_RPI_pairSeq, read_NPInter_pairSeq
 from copy import deepcopy
 import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import matplotlib.pylab as plt
+%matplotlib inline
 
 isPrint = True
 
