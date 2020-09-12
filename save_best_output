@@ -1,0 +1,32 @@
+{
+	"NPInter": {
+		"dataset": "npz/LOG_NPInter.npz",
+		"best_score": 0.718,
+		"best_params": 0.888,
+		"best_model": 0.999
+	},
+	"RPI1807": {
+		"dataset": "",
+		"best_score": 0,
+		"best_params": {},
+		"best_model": {}
+	},
+	"RPI2241": {
+		"dataset": "",
+		"best_score": 0,
+		"best_params": {},
+		"best_model": {}
+	},
+	"RPI369": {
+		"dataset": "",
+		"best_score": 0,
+		"best_params": {},
+		"best_model": {}
+	},
+	"RPI488": {
+		"dataset": "",
+		"best_score": 0,
+		"best_params": {},
+		"best_model": {}
+	}
+}

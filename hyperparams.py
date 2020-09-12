@@ -94,25 +94,25 @@ PARAM_GRID = {
             "RFC" : {'max_depth': [7], 'max_leaf_nodes': [30], 'min_samples_leaf': [18], 'min_samples_split': [6], 'n_estimators': [100]},
             "SVC" : {},
             "GBC" : {},
-            "XGB" : {}
+            "XGB" : {'learning_rate': [0.1], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
         },
         2241 : {
                 "RFC" : {'max_depth': [7], 'max_leaf_nodes': [30], 'min_samples_leaf': [6], 'min_samples_split': [13], 'n_estimators': [5]},
             "SVC" : {},
             "GBC" : {},
-            "XGB" : {}
+            "XGB" : {'learning_rate': [0.075], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
         },
         369  : {
             "RFC" : {'max_depth': [6], 'max_leaf_nodes': [10], 'min_samples_leaf': [8], 'min_samples_split': [20], 'n_estimators': [30]},
             "SVC" : {},
             "GBC" : {},
-            "XGB" : {}
+            "XGB" : {'learning_rate': [0.1], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
         },
         488  : {
             "RFC" : {'max_depth': [6], 'max_leaf_nodes': [10], 'min_samples_leaf': [7], 'min_samples_split': [13], 'n_estimators': [125]},
             "SVC" : {},
             "GBC" : {},
-            "XGB" : {}
+            "XGB" : {'learning_rate': [0.075], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
         }
     }
 }

@@ -796,3 +796,7 @@ XGBClassifier(boosting='gblinear', learning_rate=0.075, max_depth=100,
              scoring='accuracy', verbose=10)
 [2020-09-11 22:10:41,789][DEBUG][<ipython-input-1-4c47cebab1e2>:297] =======================================================
 [2020-09-11 22:10:41,790][DEBUG][<ipython-input-1-4c47cebab1e2>:277] Dataset : npz/LOG_NPInter.npz
+[2020-09-12 12:10:41,107][DEBUG][<ipython-input-1-8d43bdc6fedf>:307] Classification is about to start ... 
+[2020-09-12 12:10:41,110][DEBUG][<ipython-input-1-8d43bdc6fedf>:297] =======================================================
+[2020-09-12 12:10:41,111][DEBUG][<ipython-input-1-8d43bdc6fedf>:277] Dataset : npz/LOG_NPInter.npz
+[2020-09-12 17:48:31,805][CRITICAL][<ipython-input-35-b15d39d26f8c>:80] Best Score of dataset NPInter updated with score 0.718
