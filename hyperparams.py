@@ -81,13 +81,13 @@ SEQ_PATH = {
         }
     }
 }
-'''
+
 PARAM_GRID = {
     "NPInter" : {
         "RFC" : {'max_depth': [7, 8, 9], 'max_leaf_nodes': [5, 10, 15, 20, 30], 'min_samples_leaf': [15, 18, 21, 24, 30], 'min_samples_split': [6, 8, 10, 13], 'n_estimators': [50, 100, 125]},
         "SVC" : {},
         "GBC" : {},
-        "XGB" : {}
+        "XGB" : {'boosting': ['gblinear'], 'learning_rate': [0.5], 'max_depth': [100], 'num_iterations': [1000]}
     },
     "RPI" : {
         1807 : {
@@ -151,3 +151,4 @@ PARAM_GRID = {
         }
     }
 }
+'''

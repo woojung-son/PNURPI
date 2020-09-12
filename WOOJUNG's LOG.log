@@ -800,3 +800,371 @@ XGBClassifier(boosting='gblinear', learning_rate=0.075, max_depth=100,
 [2020-09-12 12:10:41,110][DEBUG][<ipython-input-1-8d43bdc6fedf>:297] =======================================================
 [2020-09-12 12:10:41,111][DEBUG][<ipython-input-1-8d43bdc6fedf>:277] Dataset : npz/LOG_NPInter.npz
 [2020-09-12 17:48:31,805][CRITICAL][<ipython-input-35-b15d39d26f8c>:80] Best Score of dataset NPInter updated with score 0.718
+[2020-09-12 21:28:51,594][DEBUG][<ipython-input-1-8d43bdc6fedf>:200] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.939
+[2020-09-12 21:28:51,606][DEBUG][<ipython-input-1-8d43bdc6fedf>:201] GridSearchCV를 이용한 최적 매개변수 ==> {'boosting': 'gblinear', 'learning_rate': 0.5, 'max_depth': 100, 'num_iterations': 1000}
+[2020-09-12 21:28:51,607][DEBUG][<ipython-input-1-8d43bdc6fedf>:202] GridSearchCV를 이용한 test점수 ==> 0.949
+[2020-09-12 21:28:51,612][DEBUG][<ipython-input-1-8d43bdc6fedf>:203] GridSearchCV를 이용한 최고 성능 모델 ==> 
+XGBClassifier(boosting='gblinear', learning_rate=0.5, max_depth=100,
+              num_iterations=1000, probability=True)
+[2020-09-12 21:28:51,665][WARNING][<ipython-input-1-8d43bdc6fedf>:299] K_fold with 5 epoch : GridSearchCV(cv=5, estimator=XGBClassifier(probability=True), n_jobs=-1,
+             param_grid={'boosting': ['gblinear', 'gbtree', 'dart'],
+                         'learning_rate': [0.01, 0.05, 0.075, 0.1, 0.5],
+                         'max_depth': [100, 250, 500],
+                         'num_iterations': [1000, 3000, 6000]},
+             scoring='accuracy', verbose=10)
+[2020-09-12 21:45:55,940][DEBUG][<ipython-input-3-ba4637299337>:307] Classification is about to start ... 
+[2020-09-12 21:45:55,941][DEBUG][<ipython-input-3-ba4637299337>:301] =======================================================
+[2020-09-12 21:45:55,942][DEBUG][<ipython-input-3-ba4637299337>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:46:14,156][DEBUG][<ipython-input-3-ba4637299337>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:46:14,157][DEBUG][<ipython-input-3-ba4637299337>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:46:14,158][WARNING][<ipython-input-3-ba4637299337>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:46:14,181][DEBUG][<ipython-input-3-ba4637299337>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:46:14,185][WARNING][<ipython-input-3-ba4637299337>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:46:14,188][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 21:57:11,015][DEBUG][<ipython-input-4-1df2c81c43ba>:308] Classification is about to start ... 
+[2020-09-12 21:57:11,016][DEBUG][<ipython-input-4-1df2c81c43ba>:301] =======================================================
+[2020-09-12 21:57:11,017][DEBUG][<ipython-input-4-1df2c81c43ba>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:57:26,498][DEBUG][<ipython-input-4-1df2c81c43ba>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:57:26,500][DEBUG][<ipython-input-4-1df2c81c43ba>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:57:26,505][WARNING][<ipython-input-4-1df2c81c43ba>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:57:26,525][DEBUG][<ipython-input-4-1df2c81c43ba>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:57:26,529][WARNING][<ipython-input-4-1df2c81c43ba>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:57:34,710][DEBUG][<ipython-input-5-993ab34e0a79>:308] Classification is about to start ... 
+[2020-09-12 21:57:34,711][DEBUG][<ipython-input-5-993ab34e0a79>:301] =======================================================
+[2020-09-12 21:57:34,712][DEBUG][<ipython-input-5-993ab34e0a79>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:57:48,895][DEBUG][<ipython-input-5-993ab34e0a79>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:57:48,896][DEBUG][<ipython-input-5-993ab34e0a79>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:57:48,897][WARNING][<ipython-input-5-993ab34e0a79>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:57:48,911][DEBUG][<ipython-input-5-993ab34e0a79>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:57:48,915][WARNING][<ipython-input-5-993ab34e0a79>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:58:02,506][DEBUG][<ipython-input-6-1b72cd5f82a0>:308] Classification is about to start ... 
+[2020-09-12 21:58:02,507][DEBUG][<ipython-input-6-1b72cd5f82a0>:301] =======================================================
+[2020-09-12 21:58:02,508][DEBUG][<ipython-input-6-1b72cd5f82a0>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:58:17,368][DEBUG][<ipython-input-6-1b72cd5f82a0>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:58:17,369][DEBUG][<ipython-input-6-1b72cd5f82a0>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:58:17,370][WARNING][<ipython-input-6-1b72cd5f82a0>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:58:17,382][DEBUG][<ipython-input-6-1b72cd5f82a0>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:58:17,386][WARNING][<ipython-input-6-1b72cd5f82a0>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:58:39,725][DEBUG][<ipython-input-7-208a96641f46>:307] Classification is about to start ... 
+[2020-09-12 21:58:39,728][DEBUG][<ipython-input-7-208a96641f46>:301] =======================================================
+[2020-09-12 21:58:39,728][DEBUG][<ipython-input-7-208a96641f46>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:58:54,952][DEBUG][<ipython-input-7-208a96641f46>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:58:54,953][DEBUG][<ipython-input-7-208a96641f46>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:58:54,954][WARNING][<ipython-input-7-208a96641f46>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:58:54,967][DEBUG][<ipython-input-7-208a96641f46>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:58:54,973][WARNING][<ipython-input-7-208a96641f46>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:58:54,976][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 21:59:09,992][DEBUG][<ipython-input-8-208a96641f46>:307] Classification is about to start ... 
+[2020-09-12 21:59:09,992][DEBUG][<ipython-input-8-208a96641f46>:301] =======================================================
+[2020-09-12 21:59:09,993][DEBUG][<ipython-input-8-208a96641f46>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 21:59:25,140][DEBUG][<ipython-input-8-208a96641f46>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 21:59:25,141][DEBUG][<ipython-input-8-208a96641f46>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 21:59:25,142][WARNING][<ipython-input-8-208a96641f46>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 21:59:25,157][DEBUG][<ipython-input-8-208a96641f46>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 21:59:25,160][WARNING][<ipython-input-8-208a96641f46>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 21:59:25,165][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 22:38:32,461][DEBUG][<ipython-input-9-6364ae436228>:307] Classification is about to start ... 
+[2020-09-12 22:38:32,463][DEBUG][<ipython-input-9-6364ae436228>:301] =======================================================
+[2020-09-12 22:38:32,463][DEBUG][<ipython-input-9-6364ae436228>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 22:38:48,218][DEBUG][<ipython-input-9-6364ae436228>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 22:38:48,219][DEBUG][<ipython-input-9-6364ae436228>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:38:48,220][WARNING][<ipython-input-9-6364ae436228>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 22:38:48,235][DEBUG][<ipython-input-9-6364ae436228>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:38:48,238][WARNING][<ipython-input-9-6364ae436228>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 22:38:48,256][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 22:40:08,149][DEBUG][<ipython-input-10-10b549ca4de9>:308] Classification is about to start ... 
+[2020-09-12 22:40:08,150][DEBUG][<ipython-input-10-10b549ca4de9>:301] =======================================================
+[2020-09-12 22:40:08,151][DEBUG][<ipython-input-10-10b549ca4de9>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 22:40:21,191][DEBUG][<ipython-input-10-10b549ca4de9>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 22:40:21,193][DEBUG][<ipython-input-10-10b549ca4de9>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:40:21,194][WARNING][<ipython-input-10-10b549ca4de9>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 22:40:21,209][DEBUG][<ipython-input-10-10b549ca4de9>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:40:21,213][WARNING][<ipython-input-10-10b549ca4de9>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 22:40:21,239][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 22:41:22,019][DEBUG][<ipython-input-11-090ea324a68f>:308] Classification is about to start ... 
+[2020-09-12 22:41:22,020][DEBUG][<ipython-input-11-090ea324a68f>:301] =======================================================
+[2020-09-12 22:41:22,020][DEBUG][<ipython-input-11-090ea324a68f>:276] Dataset : npz/LOG_RPI369.npz
+[2020-09-12 22:41:34,824][DEBUG][<ipython-input-11-090ea324a68f>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.636
+[2020-09-12 22:41:34,825][DEBUG][<ipython-input-11-090ea324a68f>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:41:34,826][WARNING][<ipython-input-11-090ea324a68f>:98] GridSearchCV를 이용한 test점수 ==> 0.642
+[2020-09-12 22:41:34,840][DEBUG][<ipython-input-11-090ea324a68f>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:41:34,845][WARNING][<ipython-input-11-090ea324a68f>:303] K_fold with 5 epoch : 0.6418918918918919
+[2020-09-12 22:41:34,874][DEBUG][save_best_output.py:81] Best Score of dataset RPI369 updated with score 0.6418918918918919
+[2020-09-12 22:41:34,877][DEBUG][<ipython-input-11-090ea324a68f>:301] =======================================================
+[2020-09-12 22:41:34,878][DEBUG][<ipython-input-11-090ea324a68f>:276] Dataset : npz/LOG_RPI488.npz
+[2020-09-12 22:41:43,660][DEBUG][<ipython-input-11-090ea324a68f>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.874
+[2020-09-12 22:41:43,661][DEBUG][<ipython-input-11-090ea324a68f>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:41:43,661][WARNING][<ipython-input-11-090ea324a68f>:98] GridSearchCV를 이용한 test점수 ==> 0.857
+[2020-09-12 22:41:43,677][DEBUG][<ipython-input-11-090ea324a68f>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:41:43,680][WARNING][<ipython-input-11-090ea324a68f>:303] K_fold with 5 epoch : 0.8571428571428571
+[2020-09-12 22:41:43,710][DEBUG][save_best_output.py:81] Best Score of dataset RPI488 updated with score 0.8571428571428571
+[2020-09-12 22:41:43,714][DEBUG][<ipython-input-11-090ea324a68f>:301] =======================================================
+[2020-09-12 22:41:43,716][DEBUG][<ipython-input-11-090ea324a68f>:276] Dataset : npz/LOG_RPI1807.npz
+[2020-09-12 22:43:10,362][DEBUG][<ipython-input-11-090ea324a68f>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.963
+[2020-09-12 22:43:10,363][DEBUG][<ipython-input-11-090ea324a68f>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:43:10,364][WARNING][<ipython-input-11-090ea324a68f>:98] GridSearchCV를 이용한 test점수 ==> 0.971
+[2020-09-12 22:43:10,378][DEBUG][<ipython-input-11-090ea324a68f>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:43:10,389][WARNING][<ipython-input-11-090ea324a68f>:303] K_fold with 5 epoch : 0.970679012345679
+[2020-09-12 22:43:10,418][DEBUG][save_best_output.py:81] Best Score of dataset RPI1807 updated with score 0.970679012345679
+[2020-09-12 22:43:10,423][DEBUG][<ipython-input-11-090ea324a68f>:301] =======================================================
+[2020-09-12 22:43:10,424][DEBUG][<ipython-input-11-090ea324a68f>:276] Dataset : npz/LOG_RPI2241.npz
+[2020-09-12 22:47:04,194][DEBUG][<ipython-input-11-090ea324a68f>:96] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.816
+[2020-09-12 22:47:04,195][DEBUG][<ipython-input-11-090ea324a68f>:97] GridSearchCV를 이용한 최적 매개변수 ==> {'gbc__learning_rate': 0.05, 'gbc__max_depth': 6, 'gbc__min_samples_leaf': 3, 'gbc__min_samples_split': 2, 'gbc__n_estimators': 100, 'rfc__max_depth': 6, 'rfc__max_leaf_nodes': 10, 'rfc__min_samples_leaf': 8, 'rfc__min_samples_split': 20, 'rfc__n_estimators': 30, 'svc__C': 0.1, 'svc__gamma': 0.1, 'svc__kernel': 'rbf', 'svc__random_state': 2, 'xgb__C': 0.1, 'xgb__gamma': 0.1, 'xgb__kernel': 'rbf', 'xgb__learning_rate': 0.1, 'xgb__max_depth': 100, 'xgb__n_estimators': 100, 'xgb__num_iterations': 1000, 'xgb__random_state': 2}
+[2020-09-12 22:47:04,196][WARNING][<ipython-input-11-090ea324a68f>:98] GridSearchCV를 이용한 test점수 ==> 0.848
+[2020-09-12 22:47:04,208][DEBUG][<ipython-input-11-090ea324a68f>:99] GridSearchCV를 이용한 최고 성능 모델 ==> 
+VotingClassifier(estimators=[('rfc',
+                              RandomForestClassifier(max_depth=6,
+                                                     max_leaf_nodes=10,
+                                                     min_samples_leaf=8,
+                                                     min_samples_split=20,
+                                                     n_estimators=30,
+                                                     random_state=2)),
+                             ('svc',
+                              SVC(C=0.1, gamma=0.1, probability=True,
+                                  random_state=2)),
+                             ('gbc',
+                              GradientBoostingClassifier(learning_rate=0.05,
+                                                         max_depth=6,
+                                                         min_samples_leaf=3,
+                                                         random_state=2)),
+                             ('xgb',
+                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',
+                                            max_depth=100, num_iterations=1000,
+                                            probability=True,
+                                            random_state=2))],
+                 n_jobs=-1, verbose=10, voting='soft')
+[2020-09-12 22:47:04,219][WARNING][<ipython-input-11-090ea324a68f>:303] K_fold with 5 epoch : 0.8483835005574136
+[2020-09-12 22:47:04,250][DEBUG][save_best_output.py:81] Best Score of dataset RPI2241 updated with score 0.8483835005574136
+[2020-09-12 22:47:04,253][DEBUG][<ipython-input-11-090ea324a68f>:295] =======================================================
+[2020-09-12 22:47:04,253][DEBUG][<ipython-input-11-090ea324a68f>:276] Dataset : npz/LOG_NPInter.npz
