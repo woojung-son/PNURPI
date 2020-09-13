@@ -2,40 +2,27 @@
 import json
 from collections import OrderedDict
 from Logger import *
+import glob
+import os.path
 
-
-'''{
-    "json_string": "string_example",
-    "json_number": 100,
-    "json_array": [1, 2, 3, 4, 5],
-    "json_object": { "name":"John", "age":30},
-    "json_bool": true
-}'''
 def save_best_output(npz_path, best_score, best_params, best_model) :
     
     datasets = ['NPInter', 'RPI369', 'RPI488', 'RPI1807', 'RPI2241']
 
-    #npz/LOG_NPInter.npz
+
 
     for dataset in datasets :
         if dataset in npz_path :
             targetDataset = dataset
-    
+
     current_score_dict = {
         "dataset" : npz_path,
         "best_score" : best_score,
         "best_params" : best_params,
-        "best_model" : str(best_model)
+        "best_model" : best_model.replace('\t', ' ').replace(' ', '')
     }
-
-    # with를 이용해 파일을 연다.
-    # json 파일은 같은 폴더에 있다고 가정!
-    fp = open('best_output.json', 'w+', encoding='UTF-8')
-    data_str = fp.readlines()
     
-    if len(data_str) <= 0 :
-        #print('len : {}'.format(len(data_str)))
-        result_dict = {
+    result_dict = {
             "NPInter" : {
                 "dataset" : '',
                 "best_score" : 0,
@@ -65,20 +52,29 @@ def save_best_output(npz_path, best_score, best_params, best_model) :
                 "best_score" : 0,
                 "best_params" : {},
                 "best_model" : {}
-            },
+            }
         }
-        #print(json.JSONEncoder().encode(result_dict))
+    
+    file = './best_output.json'
+
+    if not os.path.exists(file) : 
+        # with를 이용해 파일을 연다.
+        # json 파일은 같은 폴더에 있다고 가정!
+
+        fp = open('best_output.json', 'w', encoding='UTF-8')
+        
         fp.write(json.JSONEncoder().encode(result_dict))
-    fp.close()
+        fp.close()
     
     fp = open('best_output.json', 'r+', encoding='UTF-8')
     data_json = json.load(fp)
-    print('targetDataset : {}'.format(targetDataset))
+    #print('targetDataset : {}'.format(targetDataset))
     best_score_so_far = data_json[targetDataset]["best_score"]
+    logger.debug('[save_best_output]best_score_so_far : {}'.format(best_score_so_far))
     
     if best_score > best_score_so_far :
         data_json[targetDataset] = current_score_dict
-        logger.debug('Best Score of dataset {0} updated with score {1}'.format(targetDataset, best_score))
+        logger.debug('[save_best_output]Best Score of dataset {0} updated with score {1}'.format(targetDataset, best_score))
         
     fp.close()
         

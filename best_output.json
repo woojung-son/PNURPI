@@ -1,19 +1,19 @@
 {
 	"NPInter": {
-		"dataset": "",
-		"best_score": 0,
-		"best_params": {},
-		"best_model": {}
+		"dataset": "npz/LOG_NPInter.npz",
+		"best_score": 0.8751500600240096,
+		"best_params": {
+			"max_depth": 6,
+			"max_leaf_nodes": 10,
+			"min_samples_leaf": 8,
+			"min_samples_split": 8,
+			"n_estimators": 10
+		},
+		"best_model": "RandomForestClassifier(max_depth=6,max_leaf_nodes=10,min_samples_leaf=8,min_samples_split=8,n_estimators=10,random_state=2)"
 	},
 	"RPI1807": {
-		"dataset": "",
-		"best_score": 0,
-		"best_params": {},
-		"best_model": {}
-	},
-	"RPI2241": {
-		"dataset": "npz/LOG_RPI2241.npz",
-		"best_score": 0.8483835005574136,
+		"dataset": "npz/LOG_RPI1807.npz",
+		"best_score": 0.9722222222222222,
 		"best_params": {
 			"gbc__learning_rate": 0.05,
 			"gbc__max_depth": 6,
@@ -38,18 +38,76 @@
 			"xgb__num_iterations": 1000,
 			"xgb__random_state": 2
 		},
-		"best_model": "VotingClassifier(estimators=[('rfc',                              RandomForestClassifier(max_depth=6,                                                     max_leaf_nodes=10,                                                     min_samples_leaf=8,                                                     min_samples_split=20,                                                     n_estimators=30,                                                     random_state=2)),                             ('svc',                              SVC(C=0.1, gamma=0.1, probability=True,                                  random_state=2)),                             ('gbc',                              GradientBoostingClassifier(learning_rate=0.05,                                                         max_depth=6,                                                         min_samples_leaf=3,                                                         random_state=2)),                             ('xgb',                              XGBClassifier(C=0.1, gamma=0.1, kernel='rbf',                                            max_depth=100, num_iterations=1000,                                            probability=True,                                            random_state=2))],                 n_jobs=-1, verbose=10, voting='soft')"
+		"best_model": "VotingClassifier(estimators=[('rfc',RandomForestClassifier(max_depth=6,max_leaf_nodes=10,min_samples_leaf=8,min_samples_split=20,n_estimators=30,random_state=2)),('svc',SVC(C=0.1,gamma=0.1,probability=True,random_state=2)),('gbc',GradientBoostingClassifier(learning_rate=0.05,max_depth=6,min_samples_leaf=3,random_state=2)),('xgb',XGBClassifier(C=0.1,gamma=0.1,kernel='rbf',max_depth=100,num_iterations=1000,probability=True,random_state=2))],n_jobs=-1,verbose=10,voting='soft')"
+	},
+	"RPI2241": {
+		"dataset": "npz/LOG_RPI2241.npz",
+		"best_score": 0.835005574136009,
+		"best_params": {
+			"gbc__learning_rate": 0.05,
+			"gbc__max_depth": 6,
+			"gbc__min_samples_leaf": 3,
+			"gbc__min_samples_split": 2,
+			"gbc__n_estimators": 100,
+			"rfc__max_depth": 6,
+			"rfc__max_leaf_nodes": 10,
+			"rfc__min_samples_leaf": 8,
+			"rfc__min_samples_split": 20,
+			"rfc__n_estimators": 30,
+			"svc__C": 0.1,
+			"svc__gamma": 0.1,
+			"svc__kernel": "rbf",
+			"svc__random_state": 2,
+			"xgb__C": 0.1,
+			"xgb__gamma": 0.1,
+			"xgb__kernel": "rbf",
+			"xgb__learning_rate": 0.1,
+			"xgb__max_depth": 100,
+			"xgb__n_estimators": 100,
+			"xgb__num_iterations": 1000,
+			"xgb__random_state": 2
+		},
+		"best_model": "VotingClassifier(estimators=[('rfc',RandomForestClassifier(max_depth=6,max_leaf_nodes=10,min_samples_leaf=8,min_samples_split=20,n_estimators=30,random_state=2)),('svc',SVC(C=0.1,gamma=0.1,probability=True,random_state=2)),('gbc',GradientBoostingClassifier(learning_rate=0.05,max_depth=6,min_samples_leaf=3,random_state=2)),('xgb',XGBClassifier(C=0.1,gamma=0.1,kernel='rbf',max_depth=100,num_iterations=1000,probability=True,random_state=2))],n_jobs=-1,verbose=10,voting='soft')"
 	},
 	"RPI369": {
-		"dataset": "",
-		"best_score": 0,
-		"best_params": {},
-		"best_model": {}
+		"dataset": "npz/LOG_RPI369.npz",
+		"best_score": 0.6081081081081081,
+		"best_params": {
+			"gbc__learning_rate": 0.05,
+			"gbc__max_depth": 6,
+			"gbc__min_samples_leaf": 3,
+			"gbc__min_samples_split": 2,
+			"gbc__n_estimators": 100,
+			"rfc__max_depth": 6,
+			"rfc__max_leaf_nodes": 10,
+			"rfc__min_samples_leaf": 8,
+			"rfc__min_samples_split": 20,
+			"rfc__n_estimators": 30,
+			"svc__C": 0.1,
+			"svc__gamma": 0.1,
+			"svc__kernel": "rbf",
+			"svc__random_state": 2,
+			"xgb__C": 0.1,
+			"xgb__gamma": 0.1,
+			"xgb__kernel": "rbf",
+			"xgb__learning_rate": 0.1,
+			"xgb__max_depth": 100,
+			"xgb__n_estimators": 100,
+			"xgb__num_iterations": 1000,
+			"xgb__random_state": 2
+		},
+		"best_model": "VotingClassifier(estimators=[('rfc',RandomForestClassifier(max_depth=6,max_leaf_nodes=10,min_samples_leaf=8,min_samples_split=20,n_estimators=30,random_state=2)),('svc',SVC(C=0.1,gamma=0.1,probability=True,random_state=2)),('gbc',GradientBoostingClassifier(learning_rate=0.05,max_depth=6,min_samples_leaf=3,random_state=2)),('xgb',XGBClassifier(C=0.1,gamma=0.1,kernel='rbf',max_depth=100,num_iterations=1000,probability=True,random_state=2))],n_jobs=-1,verbose=10,voting='soft')"
 	},
 	"RPI488": {
-		"dataset": "",
-		"best_score": 0,
-		"best_params": {},
-		"best_model": {}
+		"dataset": "npz/LOG_RPI488.npz",
+		"best_score": 0.8979591836734694,
+		"best_params": {
+			"max_depth": 6,
+			"max_leaf_nodes": 10,
+			"min_samples_leaf": 8,
+			"min_samples_split": 8,
+			"n_estimators": 10
+		},
+		"best_model": "RandomForestClassifier(max_depth=6,max_leaf_nodes=10,min_samples_leaf=8,min_samples_split=8,n_estimators=10,random_state=2)"
 	}
 }
