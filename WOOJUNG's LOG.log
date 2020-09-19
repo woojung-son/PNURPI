@@ -2839,3 +2839,56 @@ XGBClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=6,
 [2020-09-13 19:11:00,041][DEBUG][save_best_output.py:73] [save_best_output]best_score_so_far : 0.835005574136009
 [2020-09-13 19:11:00,046][DEBUG][<ipython-input-1-cd1eceaa9671>:297] =======================================================
 [2020-09-13 19:11:00,047][DEBUG][<ipython-input-1-cd1eceaa9671>:277] Dataset : npz/Z_NPInter.npz
+[2020-09-13 19:16:00,936][DEBUG][<ipython-input-2-c5860ec79b1d>:311] Classification is about to start ... 
+[2020-09-13 19:16:00,937][DEBUG][<ipython-input-2-c5860ec79b1d>:303] =======================================================
+[2020-09-13 19:16:00,938][DEBUG][<ipython-input-2-c5860ec79b1d>:277] Dataset : npz/Z_RPI369.npz
+[2020-09-13 19:16:00,960][DEBUG][<ipython-input-2-c5860ec79b1d>:159] =======================================================
+[2020-09-13 19:16:00,961][DEBUG][<ipython-input-2-c5860ec79b1d>:160] XGB_Classifying ...
+[2020-09-13 19:16:06,687][DEBUG][<ipython-input-2-c5860ec79b1d>:185] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.603
+[2020-09-13 19:16:06,688][DEBUG][<ipython-input-2-c5860ec79b1d>:186] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 6, 'max_leaf_nodes': 10, 'min_samples_leaf': 8, 'min_samples_split': 20, 'n_estimators': 30}
+[2020-09-13 19:16:06,689][DEBUG][<ipython-input-2-c5860ec79b1d>:187] GridSearchCV를 이용한 test점수 ==> 0.547
+[2020-09-13 19:16:06,690][DEBUG][<ipython-input-2-c5860ec79b1d>:188] GridSearchCV를 이용한 최고 성능 모델 ==> 
+XGBClassifier(max_depth=6, max_leaf_nodes=10, min_samples_leaf=8,
+              min_samples_split=20, n_estimators=30, probability=True)
+[2020-09-13 19:16:06,692][WARNING][<ipython-input-2-c5860ec79b1d>:305] K_fold with 5 epoch : 0.5472972972972973
+[2020-09-13 19:16:06,695][DEBUG][save_best_output.py:73] [save_best_output]best_score_so_far : 0.6081081081081081
+[2020-09-13 19:16:06,697][DEBUG][<ipython-input-2-c5860ec79b1d>:303] =======================================================
+[2020-09-13 19:16:06,698][DEBUG][<ipython-input-2-c5860ec79b1d>:277] Dataset : npz/Z_RPI488.npz
+[2020-09-13 19:16:06,716][DEBUG][<ipython-input-2-c5860ec79b1d>:159] =======================================================
+[2020-09-13 19:16:06,717][DEBUG][<ipython-input-2-c5860ec79b1d>:160] XGB_Classifying ...
+[2020-09-13 19:16:12,667][DEBUG][<ipython-input-2-c5860ec79b1d>:185] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.859
+[2020-09-13 19:16:12,668][DEBUG][<ipython-input-2-c5860ec79b1d>:186] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 6, 'max_leaf_nodes': 10, 'min_samples_leaf': 7, 'min_samples_split': 13, 'n_estimators': 125}
+[2020-09-13 19:16:12,669][DEBUG][<ipython-input-2-c5860ec79b1d>:187] GridSearchCV를 이용한 test점수 ==> 0.878
+[2020-09-13 19:16:12,670][DEBUG][<ipython-input-2-c5860ec79b1d>:188] GridSearchCV를 이용한 최고 성능 모델 ==> 
+XGBClassifier(max_depth=6, max_leaf_nodes=10, min_samples_leaf=7,
+              min_samples_split=13, n_estimators=125, probability=True)
+[2020-09-13 19:16:12,672][WARNING][<ipython-input-2-c5860ec79b1d>:305] K_fold with 5 epoch : 0.8775510204081632
+[2020-09-13 19:16:12,674][DEBUG][save_best_output.py:73] [save_best_output]best_score_so_far : 0.8979591836734694
+[2020-09-13 19:16:12,677][DEBUG][<ipython-input-2-c5860ec79b1d>:303] =======================================================
+[2020-09-13 19:16:12,678][DEBUG][<ipython-input-2-c5860ec79b1d>:277] Dataset : npz/Z_RPI1807.npz
+[2020-09-13 19:16:12,745][DEBUG][<ipython-input-2-c5860ec79b1d>:159] =======================================================
+[2020-09-13 19:16:12,746][DEBUG][<ipython-input-2-c5860ec79b1d>:160] XGB_Classifying ...
+[2020-09-13 19:16:39,791][DEBUG][<ipython-input-2-c5860ec79b1d>:185] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.968
+[2020-09-13 19:16:39,792][DEBUG][<ipython-input-2-c5860ec79b1d>:186] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 30, 'min_samples_leaf': 18, 'min_samples_split': 6, 'n_estimators': 100}
+[2020-09-13 19:16:39,792][DEBUG][<ipython-input-2-c5860ec79b1d>:187] GridSearchCV를 이용한 test점수 ==> 0.965
+[2020-09-13 19:16:39,793][DEBUG][<ipython-input-2-c5860ec79b1d>:188] GridSearchCV를 이용한 최고 성능 모델 ==> 
+XGBClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=18,
+              min_samples_split=6, probability=True)
+[2020-09-13 19:16:39,803][WARNING][<ipython-input-2-c5860ec79b1d>:305] K_fold with 5 epoch : 0.9645061728395061
+[2020-09-13 19:16:39,806][DEBUG][save_best_output.py:73] [save_best_output]best_score_so_far : 0.9722222222222222
+[2020-09-13 19:16:39,813][DEBUG][<ipython-input-2-c5860ec79b1d>:303] =======================================================
+[2020-09-13 19:16:39,814][DEBUG][<ipython-input-2-c5860ec79b1d>:277] Dataset : npz/Z_RPI2241.npz
+[2020-09-13 19:16:39,896][DEBUG][<ipython-input-2-c5860ec79b1d>:159] =======================================================
+[2020-09-13 19:16:39,897][DEBUG][<ipython-input-2-c5860ec79b1d>:160] XGB_Classifying ...
+[2020-09-13 19:16:43,447][DEBUG][<ipython-input-2-c5860ec79b1d>:185] GridSearchCV를 이용한 최적 매개변수 점수 ==> 0.779
+[2020-09-13 19:16:43,447][DEBUG][<ipython-input-2-c5860ec79b1d>:186] GridSearchCV를 이용한 최적 매개변수 ==> {'max_depth': 7, 'max_leaf_nodes': 30, 'min_samples_leaf': 6, 'min_samples_split': 13, 'n_estimators': 5}
+[2020-09-13 19:16:43,448][DEBUG][<ipython-input-2-c5860ec79b1d>:187] GridSearchCV를 이용한 test점수 ==> 0.766
+[2020-09-13 19:16:43,450][DEBUG][<ipython-input-2-c5860ec79b1d>:188] GridSearchCV를 이용한 최고 성능 모델 ==> 
+XGBClassifier(max_depth=7, max_leaf_nodes=30, min_samples_leaf=6,
+              min_samples_split=13, n_estimators=5, probability=True)
+[2020-09-13 19:16:43,462][WARNING][<ipython-input-2-c5860ec79b1d>:305] K_fold with 5 epoch : 0.7658862876254181
+[2020-09-13 19:16:43,466][DEBUG][save_best_output.py:73] [save_best_output]best_score_so_far : 0.835005574136009
+[2020-09-13 19:16:43,473][DEBUG][<ipython-input-2-c5860ec79b1d>:297] =======================================================
+[2020-09-13 19:16:43,474][DEBUG][<ipython-input-2-c5860ec79b1d>:277] Dataset : npz/Z_NPInter.npz
+[2020-09-13 19:16:43,820][DEBUG][<ipython-input-2-c5860ec79b1d>:159] =======================================================
+[2020-09-13 19:16:43,821][DEBUG][<ipython-input-2-c5860ec79b1d>:160] XGB_Classifying ...

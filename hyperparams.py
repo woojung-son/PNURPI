@@ -11,6 +11,15 @@ NPZ_PATH = {
         488  : "npz/RPI488.npz"
     }
 }
+NPZ_PATH_STRUCT = {
+    "NPInter" : "npz/STRUCT_NPInter.npz",
+    "RPI" : {
+        1807 : "npz/STRUCT_RPI1807.npz",
+        2241 : "npz/STRUCT_RPI2241.npz",
+        369  : "npz/STRUCT_RPI369.npz",
+        488  : "npz/STRUCT_RPI488.npz"
+    }
+}
 Z_NPZ_PATH = {
     "NPInter" : "npz/Z_NPInter.npz",
     "RPI" : {
@@ -81,6 +90,31 @@ SEQ_PATH = {
         }
     }
 }
+STR_PATH = {
+    "NPInter" : {
+        "RNA"     : STR_PATH + "NPinter_rna_struct.fa",
+        "Protein" : STR_PATH + "NPinter_protein_struct.fa"
+    },
+    "RPI" : {
+        1807 : {
+            "RNA"     : STR_PATH + "RPI1807_rna_struct.fa",
+            "Protein" : STR_PATH + "RPI1807_protein_struct.fa"
+        },
+        2241 : {
+            "RNA"     : STR_PATH + "RPI2241_rna_struct.fa",
+            "Protein" : STR_PATH + "RPI2241_protein_struct.fa"
+        },
+        369  : {
+            "RNA"     : STR_PATH + "RPI369_rna_struct.fa",
+            "Protein" : STR_PATH + "RPI369_protein_struct.fa"
+        },
+        488  : {
+            "RNA"     : STR_PATH + "RPI488_rna_struct.fa",
+            "Protein" : STR_PATH + "RPI488_protein_struct.fa"
+        }
+    }
+}
+
 
 PARAM_GRID = {
     "NPInter" : {
