@@ -9,8 +9,6 @@ def save_best_output(npz_path, best_score, best_params, best_model) :
     
     datasets = ['NPInter', 'RPI369', 'RPI488', 'RPI1807', 'RPI2241']
 
-
-
     for dataset in datasets :
         if dataset in npz_path :
             targetDataset = dataset
@@ -58,8 +56,6 @@ def save_best_output(npz_path, best_score, best_params, best_model) :
     file = './best_output.json'
 
     if not os.path.exists(file) : 
-        # with를 이용해 파일을 연다.
-        # json 파일은 같은 폴더에 있다고 가정!
 
         fp = open('best_output.json', 'w', encoding='UTF-8')
         
@@ -68,7 +64,6 @@ def save_best_output(npz_path, best_score, best_params, best_model) :
     
     fp = open('best_output.json', 'r+', encoding='UTF-8')
     data_json = json.load(fp)
-    #print('targetDataset : {}'.format(targetDataset))
     best_score_so_far = data_json[targetDataset]["best_score"]
     logger.debug('[save_best_output]best_score_so_far : {}'.format(best_score_so_far))
     
@@ -80,8 +75,3 @@ def save_best_output(npz_path, best_score, best_params, best_model) :
         
     with open('best_output.json', 'w', encoding='utf-8') as fp:
         json.dump(data_json, fp, indent="\t")
-        
-    #with open('best_output.json', 'r') as f:
-    #    json_data = json.load(f)
-    #    print(json.dumps(json_data, indent="\t") )
-

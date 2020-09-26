@@ -1,14 +1,8 @@
 
-#!/usr/bin/python3 
 #from hyperparams import *
 isPrint = False
 import string
 import Bio
-
-###############################################################################
-# fasta methods
-###############################################################################
-
 
 DATASET_DICT = {369 : 'RPI369', 488 : 'RPI488', 1807 : 'RPI1807', 2241 : 'RPI2241', 10412 : 'NPInter'}
 BASE_PATH = "data/"
@@ -30,9 +24,8 @@ def read_data_pair(path):
                 neg_pairs.append((p, r))
     return pos_pairs, neg_pairs
 
-
 def read_data_seq(path):
-    print('path : {}'.format(path))
+    print('path of what we\'ve preprocessing : {}'.format(path))
     # .fa 파일을 읽어서 (번호 : seqneuce) 이렇게 딕셔너리를 만들어주는 함수.
     seq_dict = {}
     with open(path, 'r') as f:
@@ -49,15 +42,11 @@ def read_data_seq(path):
                     seq_dict[name] = line
     return seq_dict
     
-
 def read_RPI_pairStruct(size=10412) :
-    #print('path - SEQ_PATH + DATASET_DICT[size]: {}'.format(SEQ_PATH + "_protein_seq.fa"))
     pro_seqs = read_data_seq(SEQ_PATH + DATASET_DICT[size] + '_protein_seq.fa')
-    #pro_seqs = read_data_seq(SEQ_PATH + DATASET_DICT[size] + '_protein_seq.fa')
     rna_seqs = read_data_seq(SEQ_PATH + DATASET_DICT[size] + '_rna_seq.fa')
     pro_structs = read_data_seq(STR_PATH + DATASET_DICT[size] + '_protein_struct.fa')
     rna_structs = read_data_seq(STR_PATH + DATASET_DICT[size] + '_rna_struct.fa')
     pos_pairs, neg_pairs = read_data_pair(BASE_PATH + DATASET_DICT[size] + '_pairs.txt')
 
-    
     return pos_pairs, neg_pairs, pro_seqs, rna_seqs, pro_structs, rna_structs

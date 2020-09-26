@@ -115,44 +115,54 @@ STR_PATH = {
     }
 }
 
+# 하이퍼파라미터 덜 찾은 목록 : 
+# NPInter SVC, GBC, RFC
+# RPI[18007] GBC
+# RPI[2241] GBC, LGBM
+# RPI[369] GBC
+# RPI[488] GBC
 
 PARAM_GRID = {
     "NPInter" : {
-        "RFC" : {'max_depth': [7, 8, 9], 'max_leaf_nodes': [5, 10, 15, 20, 30], 'min_samples_leaf': [15, 18, 21, 24, 30], 'min_samples_split': [6, 8, 10, 13], 'n_estimators': [50, 100, 125]},
-        "SVC" : {},
-        "GBC" : {},
-        "XGB" : {'boosting': ['gblinear'], 'learning_rate': [0.5], 'max_depth': [100], 'num_iterations': [1000]},
-        "LGBM" : {'boosting': ['gblinear'], 'learning_rate': [0.5], 'max_depth': [100], 'num_iterations': [1000]}
+        'rfc__max_depth': [7], 'rfc__max_leaf_nodes': [30], 'rfc__min_samples_leaf': [18], 'rfc__min_samples_split': [13], 'rfc__n_estimators': [100],
+        'svc__C': [1.0], 'svc__gamma': [0.1], 'svc__kernel': ['linear'],
+        'gbc__n_estimators' : [60], 'gbc__max_depth' : [100], 'gbc__min_samples_leaf': [3], 'gbc__min_samples_split' : [10], 'gbc__learning_rate' : [0.1], 'gbc__max_features' : [250],
+        'xgb__boosting': ['gblinear'], 'xgb__learning_rate': [0.5], 'xgb__max_depth': [100], 'xgb__num_iterations': [1000],
+        #'lgbm__boosting': ['gbdt'], 'lgbm__learning_rate': [0.5], 'lgbm__max_depth': [100], 'lgbm__num_iterations': [1000]
     },
     "RPI" : {
         1807 : {
-            "RFC" : {'max_depth': [7], 'max_leaf_nodes': [30], 'min_samples_leaf': [18], 'min_samples_split': [6], 'n_estimators': [100]},
-            "SVC" : {},
-            "GBC" : {},
-            "XGB" : {'learning_rate': [0.1], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
+            'rfc__max_depth': [7], 'rfc__max_leaf_nodes': [30], 'rfc__min_samples_leaf': [18], 'rfc__min_samples_split': [6], 'rfc__n_estimators': [100],
+            'svc__C': [1.0], 'svc__gamma': [0.1], 'svc__kernel': ['linear'],
+            'gbc__n_estimators' : [60], 'gbc__max_depth' : [100], 'gbc__min_samples_leaf': [3], 'gbc__min_samples_split' : [10], 'gbc__learning_rate' : [0.1], 'gbc__max_features' : [250],
+            'xgb__learning_rate': [0.1], 'xgb__num_iterations': [1000], 'xgb__max_depth': [100], 'xgb__boosting': ['gblinear'],
+            #'lgbm__boosting': ['gbdt'], 'lgbm__learning_rate': [0.5], 'lgbm__max_depth': [100], 'lgbm__num_iterations': [1000]
+            
         },
         2241 : {
-            "RFC" : {'max_depth': [7], 'max_leaf_nodes': [30], 'min_samples_leaf': [6], 'min_samples_split': [13], 'n_estimators': [5]},
-            "SVC" : {},
-            "GBC" : {},
-            "XGB" : {'learning_rate': [0.075], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']}
+            'rfc__max_depth': [7], 'rfc__max_leaf_nodes': [30], 'rfc__min_samples_leaf': [6], 'rfc__min_samples_split': [13], 'rfc__n_estimators': [5],
+            'svc__C': [10], 'svc__gamma':[0.01], 'svc__kernel': ['rbf'],
+            'gbc__n_estimators' : [60], 'gbc__max_depth' : [100], 'gbc__min_samples_leaf': [3], 'gbc__min_samples_split' : [10], 
+            'xgb__learning_rate': [0.075], 'xgb__num_iterations': [1000], 'xgb__max_depth': [100], 'xgb__boosting': ['gblinear'],
+            'lgbm__boosting': ['gbdt'], 'lgbm__learning_rate': [0.5], 'lgbm__max_depth': [100], 'lgbm__num_iterations': [1000]
         },
         369  : {
-            "RFC" : {'max_depth': [6], 'max_leaf_nodes': [10], 'min_samples_leaf': [8], 'min_samples_split': [20], 'n_estimators': [30]},
-            "SVC" : {},
-            "GBC" : {},
-            "XGB" : {'learning_rate': [0.1], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']},
-            "LGBM" : {'boosting': ['dart'], 'learning_rate': [0.075], 'max_depth': [100], 'num_iterations': [1000]}
+            'rfc__max_depth': [6], 'rfc__max_leaf_nodes': [10], 'rfc__min_samples_leaf': [8], 'rfc__min_samples_split': [20], 'rfc__n_estimators': [30],
+            'svc__C': [10], 'svc__gamma': [0.01], 'svc__kernel': ['rbf'],
+            #'gbc__n_estimators' : [60], 'gbc__max_depth' : [100], 'gbc__min_samples_leaf': [3], 'gbc__min_samples_split' : [10], 'gbc__learning_rate' : [0.1], 'gbc__max_features' : [250],
+            #'xgb__learning_rate': [0.1], 'xgb__num_iterations': [1000], 'xgb__max_depth': [100], 'xgb__boosting': ['gblinear'],
+            #'lgbm__boosting': ['dart'], 'lgbm__learning_rate': [0.075], 'lgbm__max_depth': [100], 'lgbm__num_iterations': [1000]
         },
         488  : {
-            "RFC" : {'max_depth': [6], 'max_leaf_nodes': [10], 'min_samples_leaf': [7], 'min_samples_split': [13], 'n_estimators': [125]},
-            "SVC" : {},
-            "GBC" : {},
-            "XGB" : {'learning_rate': [0.075], 'num_iterations': [1000], 'max_depth': [100], 'boosting': ['gblinear']},
-            "LGBM" : {'boosting': ['dart'], 'learning_rate': [0.01], 'max_depth': [100], 'num_iterations': [1000]}
+            'rfc__max_depth': [6], 'rfc__max_leaf_nodes': [10], 'rfc__min_samples_leaf': [7], 'rfc__min_samples_split': [13], 'rfc__n_estimators': [125],
+            'svc__C': [0.01], 'svc__gamma': [0.01], 'svc__kernel': ['linear'],
+            'gbc__n_estimators' : [60], 'gbc__max_depth' : [100], 'gbc__min_samples_leaf': [3], 'gbc__min_samples_split' : [10], 'gbc__learning_rate' : [0.1], 'gbc__max_features' : [250],
+            'xgb__learning_rate': [0.075], 'xgb__num_iterations': [1000], 'xgb__max_depth': [100], 'xgb__boosting': ['gblinear'],
+            'lgbm__boosting': ['dart'], 'lgbm__learning_rate': [0.01], 'lgbm__max_depth': [100], 'lgbm__num_iterations': [1000]
         }
     }
 }
+
 '''
 PARAM_GRID = {
     "NPInter" : {
@@ -179,7 +189,7 @@ PARAM_GRID = {
         },
         369  : {
             "RFC" : {'max_depth': [4, 6, 7], 'max_leaf_nodes': [5, 10, 15, 20, 30], 'min_samples_leaf': [4, 6, 8, 10], 'min_samples_split': [18, 20, 22, 24, 28], 'n_estimators': [5, 10, 20, 30]},
-            "SVC" : {},
+            "SVC" : {'gamma': [0.01, 0.1, 0.3, 1.0, 3.0]},
             "GBC" : {},
             "XGB" : {'learning_rate': [0.01, 0.05, 0.075, 0.1, 0.5], 'num_iterations': [1000, 3000, 6000], 'max_depth': [100, 250, 500], 'boosting': ['gblinear', 'gbtree', 'dart']},
             "LGBM" : {'learning_rate': [0.01, 0.05, 0.075, 0.1, 0.5], 'num_iterations': [1000, 3000, 6000], 'max_depth': [100, 250, 500], 'boosting': ['gblinear', 'gbtree', 'dart']}
