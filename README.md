@@ -31,7 +31,7 @@ CTF(Conjoint Triad Feature) is the way of preprocessing DNA-like data usually us
 
 We use ensemble model as a classifier which bundles RandomForest, Support Vector Machine and several other classifiers up with soft voting.
 
-We evaluate our model using accuracy (Acc), sensitivity (Sn), specificity (Sp), precision (Pre), Matthews correlation coefficient (MCC), and AUC (the area under the receiver operating characteristic curve (ROC).
+We evaluate our model using accuracy (`Acc`), sensitivity (`Sn`), specificity (`Sp`), precision (`Pre`), Matthews correlation coefficient (`MCC`), and `AUC` (the area under the receiver operating characteristic curve (ROC).
 
 You can see the best performance of our projects on `best_output.json` since `save_best_output.py` file tracks the best result when we get the highest Accuracy of each dataset. It is used to visualize the result of performance using AWS, ElasticSearch, Kibana.
 
