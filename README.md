@@ -35,6 +35,8 @@ We evaluate our model using accuracy (Acc), sensitivity (Sn), specificity (Sp), 
 
 You can see the best performance of our projects on `best_output.json` since `save_best_output.py` file tracks the best result when we get the highest Accuracy of each dataset. It is used to visualize the result of performance using AWS, ElasticSearch, Kibana.
 
+We did visualize using AWS EC2 server and ElasticSearch, Kibana. The server reads `best_output.json` file and visualize the performances. On the dashboard of kibana, There are vertical bar graphes comparing our accuracy scores with other models made by other research labs, line graphes comparing other kinds of scores with them as well. 
+
 ## References
 
 [1] [https://github.com/Pengeace/RPITER](https://github.com/Pengeace/RPITER)
