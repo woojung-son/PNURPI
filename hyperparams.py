@@ -1,59 +1,62 @@
 #!/usr/bin/python3 
-BASE_PATH = "data/"
+import os
+
+CUR_PATH = os.path.dirname(os.path.abspath(__file__)) + "/"
+BASE_PATH = CUR_PATH + "/data/"
 SEQ_PATH = BASE_PATH + "sequence/"
 STR_PATH = BASE_PATH + "structure/"
 NPZ_PATH = {
-    "NPInter" : "npz/NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/NPInter.npz",
     "RPI" : {
-        1807 : "npz/RPI1807.npz",
-        2241 : "npz/RPI2241.npz",
-        369  : "npz/RPI369.npz",
-        488  : "npz/RPI488.npz"
+        1807 : CUR_PATH + "npz/RPI1807.npz",
+        2241 : CUR_PATH + "npz/RPI2241.npz",
+        369  : CUR_PATH + "npz/RPI369.npz",
+        488  : CUR_PATH + "npz/RPI488.npz"
     }
 }
 NPZ_PATH_STRUCT = {
-    "NPInter" : "npz/STRUCT_NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/STRUCT_NPInter.npz",
     "RPI" : {
-        1807 : "npz/STRUCT_RPI1807.npz",
-        2241 : "npz/STRUCT_RPI2241.npz",
-        369  : "npz/STRUCT_RPI369.npz",
-        488  : "npz/STRUCT_RPI488.npz"
+        1807 : CUR_PATH + "npz/STRUCT_RPI1807.npz",
+        2241 : CUR_PATH + "npz/STRUCT_RPI2241.npz",
+        369  : CUR_PATH + "npz/STRUCT_RPI369.npz",
+        488  : CUR_PATH + "npz/STRUCT_RPI488.npz"
     }
 }
 Z_NPZ_PATH = {
-    "NPInter" : "npz/Z_NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/Z_NPInter.npz",
     "RPI" : {
-        1807 : "npz/Z_RPI1807.npz",
-        2241 : "npz/Z_RPI2241.npz",
-        369  : "npz/Z_RPI369.npz",
-        488  : "npz/Z_RPI488.npz"
+        1807 : CUR_PATH + "npz/Z_RPI1807.npz",
+        2241 : CUR_PATH + "npz/Z_RPI2241.npz",
+        369  : CUR_PATH + "npz/Z_RPI369.npz",
+        488  : CUR_PATH + "npz/Z_RPI488.npz"
     }
 }
 LOG_NPZ_PATH = {
-    "NPInter" : "npz/LOG_NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/LOG_NPInter.npz",
     "RPI" : {
-        1807 : "npz/LOG_RPI1807.npz",
-        2241 : "npz/LOG_RPI2241.npz",
-        369  : "npz/LOG_RPI369.npz",
-        488  : "npz/LOG_RPI488.npz"
+        1807 : CUR_PATH + "npz/LOG_RPI1807.npz",
+        2241 : CUR_PATH + "npz/LOG_RPI2241.npz",
+        369  : CUR_PATH + "npz/LOG_RPI369.npz",
+        488  : CUR_PATH + "npz/LOG_RPI488.npz"
     }
 }
 LOG_Z_NPZ_PATH = {
-    "NPInter" : "npz/LOG_Z_NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/LOG_Z_NPInter.npz",
     "RPI" : {
-        1807 : "npz/LOG_Z_RPI1807.npz",
-        2241 : "npz/LOG_Z_RPI2241.npz",
-        369  : "npz/LOG_Z_RPI369.npz",
-        488  : "npz/LOG_Z_RPI488.npz"
+        1807 : CUR_PATH + "npz/LOG_Z_RPI1807.npz",
+        2241 : CUR_PATH + "npz/LOG_Z_RPI2241.npz",
+        369  : CUR_PATH + "npz/LOG_Z_RPI369.npz",
+        488  : CUR_PATH + "npz/LOG_Z_RPI488.npz"
     }
 }
 LOG_M_NPZ_PATH = {
-    "NPInter" : "npz/LOG_M_NPInter.npz",
+    "NPInter" : CUR_PATH + "npz/LOG_M_NPInter.npz",
     "RPI" : {
-        1807 : "npz/LOG_M_RPI1807.npz",
-        2241 : "npz/LOG_M_RPI2241.npz",
-        369  : "npz/LOG_M_RPI369.npz",
-        488  : "npz/LOG_M_RPI488.npz"
+        1807 : CUR_PATH + "npz/LOG_M_RPI1807.npz",
+        2241 : CUR_PATH + "npz/LOG_M_RPI2241.npz",
+        369  : CUR_PATH + "npz/LOG_M_RPI369.npz",
+        488  : CUR_PATH + "npz/LOG_M_RPI488.npz"
     }
 }
 
