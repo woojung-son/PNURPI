@@ -11,6 +11,15 @@
 
 The database in order to check whether a certain RNA and protein molecules can be interacted or not. We can use it as developing machine learning model to solve classification problem of them.
 
+## About our project
+We use ensemble model as a classifier which bundles RandomForest, Support Vector Machine and several other classifiers up with soft voting.
+
+We evaluate our model using accuracy (`Acc`), sensitivity (`Sn`), specificity (`Sp`), precision (`Pre`), Matthews correlation coefficient (`MCC`), and `AUC` (the area under the receiver operating characteristic curve (ROC).
+
+You can see the best performance of our projects on `best_output.json` since `save_best_output.py` file tracks the best result when we get the highest Accuracy of each dataset. It is used to visualize the result of performance using AWS, ElasticSearch, Kibana.
+
+We did visualize using AWS EC2 server and ElasticSearch, Kibana. The server reads `best_output.json` file and visualize the performances. On the dashboard of kibana, There are vertical bar graphes comparing our accuracy scores with other models made by other research labs, line graphes comparing other kinds of scores with them as well. 
+
 ## About the Raw Data
 - In `data/` folder, there are files named ending `_pairs` which contain information of pairs of ID of RNAs and proteins with the label. Files named ending in `_pos_pairs` mean what are only consisted of interactable pairs. 
 - In `data/sequence` folder, there are files which contain sequence information of RNAs and proteins.
@@ -28,14 +37,6 @@ CTF(Conjoint Triad Feature) is the way of preprocessing DNA-like data usually us
 
 ### Usage of making preprocessed file
 `main.ipynb` file reads preprocessed files stored in `npz/` folder. It has binary classifier, splits the whole set into train and test one, returns the scores of performance of model with six criteria.
-
-We use ensemble model as a classifier which bundles RandomForest, Support Vector Machine and several other classifiers up with soft voting.
-
-We evaluate our model using accuracy (`Acc`), sensitivity (`Sn`), specificity (`Sp`), precision (`Pre`), Matthews correlation coefficient (`MCC`), and `AUC` (the area under the receiver operating characteristic curve (ROC).
-
-You can see the best performance of our projects on `best_output.json` since `save_best_output.py` file tracks the best result when we get the highest Accuracy of each dataset. It is used to visualize the result of performance using AWS, ElasticSearch, Kibana.
-
-We did visualize using AWS EC2 server and ElasticSearch, Kibana. The server reads `best_output.json` file and visualize the performances. On the dashboard of kibana, There are vertical bar graphes comparing our accuracy scores with other models made by other research labs, line graphes comparing other kinds of scores with them as well. 
 
 ## References
 
