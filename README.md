@@ -35,7 +35,7 @@ CTF(Conjoint Triad Feature) is the way of preprocessing DNA-like data usually us
 ### Usage of making preprocessed file
 `make_preprocessed_file.ipynb` file preprocesses sequence and struct data, and produces processed files of each dataset with `.npz` extension.
 
-### Usage of evaluating our model
+### Usage of operating our model
 `main.ipynb` file reads preprocessed files stored in `npz/` folder. It has binary classifier, splits the whole set into train and test one, returns the scores of performance of model with six criteria.
 
 ## References
