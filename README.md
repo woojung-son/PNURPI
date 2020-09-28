@@ -3,7 +3,7 @@
 - Team No. : 6
 - Team Name : `Could we graduate ..?`
 - Team Member : 201724545 이지현, 201729127 박성아, 201724493 Woojung Son
-- Visualization Server : http://52.79.184.82:5601/ -> Dashboard (valid until end of Oct. 2020)
+- Visualization Server : http://52.79.184.82:5601/app/kibana#/dashboard/4d687850-fe37-11ea-9a80-5b5ed9a16699 -> Dashboard (valid until end of Oct. 2020)
 
 ***RNA Protein Interaction(RPI) Database***
 # **RPIntDB**
