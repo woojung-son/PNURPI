@@ -21,6 +21,12 @@ You can see the best performance of our projects on `best_output.json` since `sa
 We did visualize using AWS EC2 server and ElasticSearch, Kibana. The server reads `best_output.json` file and visualize the performances. On the dashboard of kibana, There are vertical bar graphes comparing our accuracy scores with other models made by other research labs, line graphes comparing other kinds of scores with them as well. 
 
 ## About the Raw Data
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+
 - In `data/` folder, there are files named ending `_pairs` which contain information of pairs of ID of RNAs and proteins with the label. Files named ending in `_pos_pairs` mean what are only consisted of interactable pairs. 
 - In `data/sequence` folder, there are files which contain sequence information of RNAs and proteins.
 - In `data/struct` folder, there are files which contain struct information of RNAs and proteins, which mean two-dimentional structures of molecules.
