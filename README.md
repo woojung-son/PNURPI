@@ -1,4 +1,4 @@
-**2020 graduation Piece of Pusan National University**
+**2020 graduation Piece of Pusan National University (prize-winning project)**
 - Subject : Developing model which improves performance better than previous researches using RNA Protein Interaction(RPI) Database datasets.
 - Team No. : 6
 - Team Name : `Could we graduate ..?`
