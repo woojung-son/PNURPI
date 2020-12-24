@@ -1,4 +1,4 @@
-**(Update) 2020 Union of S/W Universities in Korea National Talent Festival (prize-winning)**
+**(Update) Union of S/W Universities in Korea, 2020 National Talent Festival (prize-winning)**
 - Team Name : `GIGA Mak-hi-jan-ni`
 - Date of Festival : 12/03/20<br/><br/>
 
