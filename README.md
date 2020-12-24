@@ -1,6 +1,6 @@
 **(Update) 2020 Union of S/W Universities in Korea National Talent Festival (prize-winning)**
 - Team Name : `GIGA Mak-hi-jan-ni`
-- Date of Festival : 12/03/20
+- Date of Festival : 12/03/20<br/><br/>
 
 **2020 graduation Piece of Pusan National University (prize-winning project)**
 - Subject : Developing model which improves performance better than previous researches using RNA Protein Interaction(RPI) Database datasets.
